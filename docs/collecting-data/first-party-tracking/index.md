@@ -4,8 +4,6 @@ sidebar_position: 40
 sidebar_custom_props:
   offerings:
     - bdp
-  # hide from sidebar and external search until these instructions apply more universally
-  hidden: true
 ---
 
 # First-party tracking
