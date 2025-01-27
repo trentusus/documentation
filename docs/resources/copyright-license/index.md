@@ -22,7 +22,7 @@ Since some of the below licenses are not approved by [OSI](https://opensource.or
 <tr>
 <th><Link to="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</Link></th>
 <th><Link to="/community-license-1.0/">Community License</Link></th>
-<th><Link to="/limited-use-license-1.0/">Limited Use License</Link></th>
+<th><Link to="/limited-use-license-1.1/">Limited Use License</Link></th>
 <th><Link to="/personal-and-academic-license-1.0/">Personal & Academic License</Link></th>
 </tr>
 
@@ -42,7 +42,7 @@ _Usage in non-competing products, no distribution_ ([FAQ](/docs/resources/commun
 </td>
 <td>
 
-_Usage in non-competing products, no high availability in production, no distribution_  ([FAQ](/docs/resources/limited-use-license-faq/index.md))
+_Usage in non-production environments only, no distribution_  ([FAQ](/docs/resources/limited-use-license-faq/index.md))
 
 </td>
 <td>

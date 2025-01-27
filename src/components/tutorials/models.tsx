@@ -7,7 +7,7 @@ export const Topic = z.enum([
   'Infrastructure',
   'Solution accelerator',
   'Tracking design',
-  'Tracking implementation',
+  'Tracking implementation'
 ])
 
 export type Topic = z.infer<typeof Topic>
