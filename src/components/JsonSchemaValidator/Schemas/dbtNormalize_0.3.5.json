@@ -22,10 +22,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "sql",
-              "alias"
-            ],
+            "required": ["sql", "alias"],
             "additionalProperties": false
           }
         ]

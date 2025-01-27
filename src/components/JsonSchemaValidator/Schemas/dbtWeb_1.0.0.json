@@ -22,10 +22,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "sql",
-              "alias"
-            ],
+            "required": ["sql", "alias"],
             "additionalProperties": false
           }
         ]
@@ -149,10 +146,7 @@
       "minItems": 0,
       "items": {
         "type": "object",
-        "required": [
-          "name",
-          "condition"
-        ],
+        "required": ["name", "condition"],
         "title": "",
         "description": "Conversion Event",
         "properties": {
@@ -494,10 +488,7 @@
             "description": "The name of the field to use as session identifier, alternatively, in case of sdes/contexts it is the name of the element that refers to the field to be extracted"
           }
         },
-        "required": [
-          "schema",
-          "field"
-        ],
+        "required": ["schema", "field"],
         "additionalProperties": false
       },
       "uniqueItems": true
@@ -546,10 +537,7 @@
             "description": "The name of the field to use as user identifier, alternatively, in case of sdes/contexts it is the name of the element that refers to the field to be extracted"
           }
         },
-        "required": [
-          "schema",
-          "field"
-        ],
+        "required": ["schema", "field"],
         "additionalProperties": false
       },
       "uniqueItems": true
@@ -647,10 +635,7 @@
             "title": "Is single entity?"
           }
         },
-        "required": [
-          "schema",
-          "prefix"
-        ],
+        "required": ["schema", "prefix"],
         "additionalProperties": false
       },
       "uniqueItems": true

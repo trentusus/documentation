@@ -115,10 +115,7 @@
       "minItems": 0,
       "items": {
         "type": "object",
-        "required": [
-          "name",
-          "condition"
-        ],
+        "required": ["name", "condition"],
         "title": "",
         "description": "Conversion Event",
         "properties": {

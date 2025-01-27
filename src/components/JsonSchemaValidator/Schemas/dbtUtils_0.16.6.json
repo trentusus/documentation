@@ -27,10 +27,7 @@
                 "order": 2
               }
             },
-            "required": [
-              "sql",
-              "alias"
-            ],
+            "required": ["sql", "alias"],
             "additionalProperties": false
           }
         ]
@@ -220,10 +217,7 @@
             "description": "The name of the field to use as session identifier, alternatively, in case of sdes/contexts it is the name of the element that refers to the field to be extracted"
           }
         },
-        "required": [
-          "schema",
-          "field"
-        ],
+        "required": ["schema", "field"],
         "additionalProperties": false
       },
       "uniqueItems": true
@@ -276,10 +270,7 @@
             "description": "The name of the field to use as user identifier, alternatively, in case of sdes/contexts it is the name of the element that refers to the field to be extracted"
           }
         },
-        "required": [
-          "schema",
-          "field"
-        ],
+        "required": ["schema", "field"],
         "additionalProperties": false
       },
       "uniqueItems": true
@@ -334,10 +325,7 @@
             "order": 4
           }
         },
-        "required": [
-          "schema",
-          "prefix"
-        ],
+        "required": ["schema", "prefix"],
         "additionalProperties": false
       },
       "uniqueItems": true

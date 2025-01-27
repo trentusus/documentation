@@ -15,7 +15,7 @@
   flex-direction: column;
 }
 
-.sendEventsCard form button[type=submit] {
+.sendEventsCard form button[type='submit'] {
   align-self: flex-end;
 }
 

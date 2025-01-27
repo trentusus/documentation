@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-  Alert,
-  Card,
-  CardContent,
-  TextField,
-} from '@mui/material'
+import { Alert, Card, CardContent, TextField } from '@mui/material'
 import { LoadingButton } from '@mui/lab'
 import { trackSelfDescribingEvent } from '@snowplow/browser-tracker'
 
@@ -14,7 +9,7 @@ import { sampleTrackingCode } from './sampleTrackingCode'
 import styles from './styles.module.css'
 
 type EventComponentNotification = {
-  collectorUrl: string,
+  collectorUrl: string
   appId: string
 }
 
@@ -158,16 +153,17 @@ export default function EventComponent() {
               error={Boolean(state.appIdError)}
               helperText={state.appIdError}
             />
-            {state.sent && (<Alert
-              variant="filled"
-              severity="success"
-              className={styles.notification}
-              onClose={
-                () => setState((prev) => ({ ...prev, sent: null }))
-              }>
-                Events sent to <code>{state.sent.collectorUrl}</code>{' '}
-                with Application ID <code>{state.sent.appId}</code>
-            </Alert>)}
+            {state.sent && (
+              <Alert
+                variant="filled"
+                severity="success"
+                className={styles.notification}
+                onClose={() => setState((prev) => ({ ...prev, sent: null }))}
+              >
+                Events sent to <code>{state.sent.collectorUrl}</code> with
+                Application ID <code>{state.sent.appId}</code>
+              </Alert>
+            )}
             <LoadingButton
               variant="contained"
               type="submit"

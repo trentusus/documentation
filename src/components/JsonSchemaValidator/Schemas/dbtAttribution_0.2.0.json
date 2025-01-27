@@ -22,10 +22,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "sql",
-              "alias"
-            ],
+            "required": ["sql", "alias"],
             "additionalProperties": false
           }
         ]
@@ -129,9 +126,7 @@
         "oneOf": [
           {
             "title": "exposure",
-            "required": [
-              "exposure"
-            ],
+            "required": ["exposure"],
             "properties": {
               "exposure": {
                 "type": "string",
@@ -141,9 +136,7 @@
           },
           {
             "title": "first",
-            "required": [
-              "first"
-            ],
+            "required": ["first"],
             "properties": {
               "first": {
                 "type": "string",
@@ -153,9 +146,7 @@
           },
           {
             "title": "unique",
-            "required": [
-              "unique"
-            ],
+            "required": ["unique"],
             "properties": {
               "unique": {
                 "type": "string",
@@ -165,9 +156,7 @@
           },
           {
             "title": "remove if last and not all",
-            "required": [
-              "remove_if_last_and_not_all"
-            ],
+            "required": ["remove_if_last_and_not_all"],
             "properties": {
               "remove_if_last_and_not_all": {
                 "type": "string"
@@ -176,9 +165,7 @@
           },
           {
             "title": "remove if not all",
-            "required": [
-              "remove_if_not_all"
-            ],
+            "required": ["remove_if_not_all"],
             "properties": {
               "remove_if_not_all": {
                 "type": "string"

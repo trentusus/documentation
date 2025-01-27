@@ -58,13 +58,15 @@ const setupBrowserTracker = () => {
 
   const selectedTabContext = () => {
     const data = pickBy({
-      cloud: localStorage.getItem("docusaurus.tab.cloud"),
-      data_warehouse: localStorage.getItem("docusaurus.tab.warehouse")
+      cloud: localStorage.getItem('docusaurus.tab.cloud'),
+      data_warehouse: localStorage.getItem('docusaurus.tab.warehouse'),
     })
-    if (!_.isEmpty(data)) return {
-      schema: 'iglu:com.snowplowanalytics.docs/selected_tabs/jsonschema/1-0-0',
-      data
-    }
+    if (!_.isEmpty(data))
+      return {
+        schema:
+          'iglu:com.snowplowanalytics.docs/selected_tabs/jsonschema/1-0-0',
+        data,
+      }
   }
   addGlobalContexts([selectedTabContext])
 

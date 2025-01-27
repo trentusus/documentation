@@ -22,10 +22,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "sql",
-              "alias"
-            ],
+            "required": ["sql", "alias"],
             "additionalProperties": false
           }
         ]
@@ -163,10 +160,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "path_transform",
-          "argument"
-        ],
+        "required": ["path_transform", "argument"],
         "additionalProperties": false
       },
       "uniqueItems": true
