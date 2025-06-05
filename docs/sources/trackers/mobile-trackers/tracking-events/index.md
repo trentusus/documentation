@@ -60,7 +60,7 @@ The tracker makes it easy to track different kinds of data. We provide a range o
 
 Each event has an associated context, which is composed of entities. The tracker attaches entities to the events based on the configuration, but you can attach your own [custom entities](/docs/sources/trackers/mobile-trackers/custom-tracking-using-schemas/index.md) as well.
 
-Every tracked event payload has a unique `event_id` UUID string set by the tracker, a set of timestamps, and other ubiquitous properties such as the `namespace`. The `event_id` is returned from the `tracker.track(event)` method. You can know more about how events and entities are structured [here](/docs/sources/trackers/snowplow-tracker-protocol/index.md).
+Every tracked event payload has a unique `event_id` UUID string set by the tracker, a set of timestamps, and other ubiquitous properties such as the `namespace`. The `event_id` is returned from the `tracker.track(event)` method. You can know more about how events and entities are structured [here](/docs/events/index.md).
 
 See the full configuration and parameter options for all these classes and methods in the API docs - [Android](https://snowplow.github.io/snowplow-android-tracker/index.html) and [iOS](https://snowplow.github.io/snowplow-ios-tracker/documentation/snowplowtracker/).
 
@@ -561,9 +561,7 @@ All events also provide the option for setting a custom timestamp, called `trueT
 
 Snowplow events have several timestamps. The raw event payload always contains a `deviceCreatedTimestamp` (`dtm`) and a `deviceSentTimestamp` (`stm`). Other timestamps are added as the event moves through the pipeline.
 
-Every `Event` in the tracker allows for a custom timestamp, called `trueTimestamp` to be set. Read more about timestamps in [this still relevant forums post](https://discourse.snowplowanalytics.com/t/which-timestamp-is-the-best-to-see-when-an-event-occurred/538).
-
-A `trueTimestamp` can be added to any event using the `trueTimestamp()` method:
+Every `Event` in the tracker allows for a custom timestamp, called `trueTimestamp` to be set. A `trueTimestamp` can be added to any event using the `trueTimestamp()` method:
 
 <Tabs groupId="platform" queryString>
   <TabItem value="ios" label="iOS" default>

@@ -9,7 +9,7 @@ import {versions} from '@site/src/componentVersions';
 import CodeBlock from '@theme/CodeBlock';
 ```
 
-[Snowplow Micro](/docs/data-product-studio/data-quality/snowplow-micro/what-is-micro/index.md) is a lightweight version of the Snowplow pipeline which is great for testing.
+[Snowplow Micro](/docs/data-product-studio/data-quality/snowplow-micro/index.md) is a lightweight version of the Snowplow pipeline which is great for testing.
 
 The [snowplow-micro-examples](https://github.com/snowplow-incubator/snowplow-micro-examples) repository aims to show in detail all the steps to setting up automated tests for your Snowplow event tracking (using Nightwatch and Cypress as examples of test tools), to build end-to-end GitHub Actions testing workflows.
 
@@ -375,7 +375,7 @@ this.command = (callback) => {
         {
             url: 'http://localhost:9090/micro/all',
             json: true
-        }, 
+        },
         (err, res, body) => {
             if (err) {
                 console.warn(error);
@@ -486,7 +486,7 @@ Generally, a test involves 3 phases:
 
 While Cypress considers as state the application's state, it is still a fact that an app is rarely an isolated system without side effects.
 
-This is especially true when a tracking strategy is implemented, which means that any action can fire [events](/docs/sources/trackers/snowplow-tracker-protocol/index.md) through the [trackers](/docs/sources/trackers/index.md). There is an increasing number of reports highlighting the importance of upstream data quality and Data Ops, which means that testing your Data Collection and trackers' implementation besides your product's features is of highest priority. Tracking is as important as your shipping, and that is why it is highly recommended that you include its testing in your E2E tests.
+This is especially true when a tracking strategy is implemented, which means that any action can fire [events](/docs/events/index.md) through the [trackers](/docs/sources/trackers/index.md). There is an increasing number of reports highlighting the importance of upstream data quality and Data Ops, which means that testing your Data Collection and trackers' implementation besides your product's features is of highest priority. Tracking is as important as your shipping, and that is why it is highly recommended that you include its testing in your E2E tests.
 
 Cypress, even though it considers as [best practice](https://docs.cypress.io/guides/references/best-practices.html#Visiting-external-sites) to avoid requiring or testing 3rd party services, it still offers the ability to "talk" to 3rd party API's via [cy.request()](https://docs.cypress.io/api/commands/request.html), that:
 
@@ -603,8 +603,8 @@ cy.eventsWithParams(
         "se_category": "Media",
         "se_action": "Play video",
         "se_label": "Surfing"
-    }, 
-    3 
+    },
+    3
 );
 ```
 
@@ -646,8 +646,8 @@ cy.eventsWithContexts(
                 "categories": ["sports", "history", "food"]
             }
         }
-    ], 
-    2 
+    ],
+    2
 );
 ```
 
@@ -680,8 +680,8 @@ cy.eventsWithProperties(
                 },
             }
         ]
-    }, 
-    1 
+    },
+    1
 );
 ```
 

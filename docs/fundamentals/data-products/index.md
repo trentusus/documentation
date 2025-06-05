@@ -38,6 +38,8 @@ Examples of data products:
 
 **The Source Application/s it is part of**; a data product is referencing the [Source Application/s](/docs/data-product-studio/source-applications/index.md) that is spanning across.
 
+![Example Data Product view](images/example_data_product_view.png)
+
 **Benefits:**
 
 * Have a clear view in which application the data product is implemented in, which domains it spans and the related application context information it will have available by default in the dataset.
@@ -50,12 +52,14 @@ Examples of data products:
 
 **Event specifications**; these describe each event that is collected as part of the data product, on which applications they are triggered and where, the event data structure to validate against, and the entities to attach to each event (e.g. user, product etc).
 
+![Example Event Specification](images/example_event_specification.png)
+
 **Benefits:**
 
 * Provide implementation details to developers implementing tracking (see section on [Snowtype](/docs/data-product-studio/snowtype/index.md) for further details)
 * Provide documentation around the semantics of the data that you are creating, to enable analysts, data scientists, analytics engineers with data discoverability
 
-**Subscribers;** allow colleagues to express an interest in understanding changes that are made to the data within a Data Product, usually because the data is being used in a downstream data model or data application.
+**Subscribers;** allow colleagues to express an interest in understanding changes that are made to the data within a Data Product, usually because the data is being used in a downstream data model or Data Model Pack.
 
 **Benefits:**
 
@@ -69,8 +73,6 @@ Break down the barriers that exist between data producers and data consumers, by
 **Benefits:**
 
 * Enhances accountability and transparency by providing a clear audit trail of all data modifications, fostering confidence in data integrity
-
-![Key elements of a Data Product](images/key-elements-of-a-data-product.png)
 
 **Volume metrics**; data products can detect events ingested in your pipeline that match the configured event specifications. This allows your team to monitor occurrence-related metrics for events being tracked with specific [event specification IDs](/docs/data-product-studio/snowtype/commands/index.md#snowtype-patch).
 

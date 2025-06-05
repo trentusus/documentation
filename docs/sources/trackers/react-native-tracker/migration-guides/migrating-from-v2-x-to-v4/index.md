@@ -11,7 +11,7 @@ This brings support for new platforms (Web, Expo Go) and new features (JS tracke
 The method for creating a new tracker instance has been changed to `newTracker`.
 This is not just a rename, but a change in the structure of its parameters, which are now more in line with the rest of our JavaScript trackers.
 
-You can review the [documentation page](/docs/sources/trackers/react-native-tracker/introduction/index.md) for the current set of configuration options.
+You can review the [documentation page](/docs/sources/trackers/react-native-tracker/index.md) for the current set of configuration options.
 
 The parameters are now provided in a flattened object instead of separated under categories.
 Some have also been renamed:
@@ -42,7 +42,7 @@ Read more [in the documentation here](/docs/sources/trackers/react-native-tracke
 ### Removed geolocation context entity
 
 The geolocation context entity is no longer available to be tracked by the tracker.
-You may track it manually using global context and [the geolocation schema](/docs/sources/trackers/snowplow-tracker-protocol/ootb-data/geolocation/index.md#geolocation-context-entity-tracked-in-apps).
+You may track it manually using global context and [the geolocation schema](/docs/events/ootb-data/geolocation/index.md#geolocation-context-entity-tracked-in-apps).
 
 ### Removed exception and diagnostic autotracking
 

@@ -37,7 +37,7 @@ module.exports = {
     mermaid: true,
   },
 
-  themes: ['@saucelabs/theme-github-codeblock', '@docusaurus/theme-mermaid'],
+  themes: ['docusaurus-theme-github-codeblock', '@docusaurus/theme-mermaid'],
 
   presets: [
     [
@@ -114,8 +114,13 @@ module.exports = {
             className: 'mobile-only',
           },
           {
-            href: 'https://discourse.snowplow.io',
-            label: 'Discourse',
+            href: 'https://support.snowplow.io/',
+            label: 'Contact Support',
+            position: 'right',
+          },
+          {
+            href: 'https://community.snowplow.io/',
+            label: 'Community',
             position: 'right',
           },
           {
@@ -150,7 +155,7 @@ module.exports = {
         copyright: `Copyright © ${new Date().getFullYear()} Snowplow Analytics Ltd. Built with Docusaurus.`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/shadesOfPurple'),
+        theme: require('prism-react-renderer').themes.shadesOfPurple,
         // Docusaurus comes with a subset of commonly used languages -https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js.
         // To add syntax highlighting for additional Prism supported languages, add reference from https://prismjs.com/#supported-languages.
         // NOTE: do a `yarn build` to ensure that it does build properly
@@ -175,6 +180,10 @@ module.exports = {
           'django',
           'yaml',
           'kotlin',
+          'bash',
+          'diff',
+          'json',
+          'hcl',
         ],
       },
       algolia: {
@@ -184,4 +193,49 @@ module.exports = {
         contextualSearch: true,
       },
     }),
+
+  customFields: {
+    webpack: {
+      configure: (config) => {
+        // Add JSX runtime resolution
+        config.resolve.alias = {
+          ...config.resolve.alias,
+          'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+          'react/jsx-dev-runtime': require.resolve('react/jsx-dev-runtime'),
+        }
+
+        // Add module rules for CSS processing
+        config.module.rules.push({
+          test: /\.css$/,
+          use: [
+            require.resolve('style-loader'),
+            require.resolve('css-loader'),
+            {
+              loader: require.resolve('postcss-loader'),
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    require.resolve('tailwindcss'),
+                    require.resolve('autoprefixer'),
+                  ],
+                },
+              },
+            },
+          ],
+        })
+
+        // Add resolve extensions
+        config.resolve.extensions = [
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+          '.json',
+          '.mjs',
+        ]
+
+        return config
+      },
+    },
+  },
 }

@@ -17,7 +17,7 @@ Once your pipeline is set up, you will want to send some events to it. Here’s 
 
 :::tip Latency
 
-Regardless of how you send the events, it might take a few minutes for them to reach your destination (e.g. data warehouse). This depends on which [destination and loader](/docs/destinations/warehouses-lakes/storage-options/index.md) you have configured.
+Regardless of how you send the events, it might take a few minutes for them to reach your destination (e.g. data warehouse). This depends on which [destination and loader](/docs/destinations/warehouses-lakes/index.md) you have configured.
 
 :::
 
@@ -138,6 +138,6 @@ We have many different trackers in different programming languages, in case the 
 
 :::tip
 
-For quick testing, you might be tempted to send data to your Collector URL using a basic command-line tool like `cURL`. However, you would need to ensure that the data format follows our [tracker protocol](/docs/sources/trackers/snowplow-tracker-protocol/index.md). Instead, take a look at the [command-line tracker](/docs/sources/trackers/snowplow-tracking-cli/index.md) that will do this for you.
+For quick testing, you might be tempted to send data to your Collector URL using a basic command-line tool like `cURL`. However, you would need to ensure that the data format follows our [tracker protocol](/docs/events/index.md). Instead, take a look at the [command-line tracker](/docs/sources/trackers/snowplow-tracking-cli/index.md) that will do this for you.
 
 :::

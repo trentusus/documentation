@@ -113,7 +113,7 @@ Set the application ID using the `appId` field of the configuration object. Th
 
 #### Setting the platform
 
-Set the application platform using the `platform` field of the configuration object. This will be attached to every event the tracker fires. Its default value is “web”. For a list of supported platforms, please see the [Snowplow Tracker Protocol](/docs/sources/trackers/snowplow-tracker-protocol/index.md#application-parameters).
+Set the application platform using the `platform` field of the configuration object. This will be attached to every event the tracker fires. Its default value is “web”. For a list of supported platforms, please see the [Snowplow Tracker Protocol](/docs/events/index.md#application-parameters).
 
 #### Configuring the cookie domain
 
@@ -473,7 +473,7 @@ When initialising the tracker, you can specify an array of features to skip.
 Full list of features:
 
 - `res` - Screen Resolution
-- `cd` - Screen Colour Depth
+- `cd` - Screen Color Depth
 - `cookie` - Cookie support (if cookies enabled in tracker initialization)
 - `pdf` - PDF MimeType Support (application/pdf)
 - `qt` - Quicktime Video MimeType Support (video/quicktime)

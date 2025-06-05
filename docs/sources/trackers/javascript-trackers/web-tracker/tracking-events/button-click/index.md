@@ -24,7 +24,7 @@ Button click events are **automatically tracked** once configured.
 <TabItem value="js" label="JavaScript (tag)" default>
 
 | Tracker Distribution | Included |
-|----------------------|----------|
+| -------------------- | -------- |
 | `sp.js`              | ✅        |
 | `sp.lite.js`         | ❌        |
 
@@ -84,7 +84,7 @@ window.snowplow('enableButtonClickTracking');
 <TabItem value="browser" label="Browser (npm)">
 
 ```javascript
-import { enableButtonClickTracking, enableButtonClickTracking } from '@snowplow/browser-plugin-button-click-tracking';
+import { enableButtonClickTracking, ButtonClickTrackingPlugin } from '@snowplow/browser-plugin-button-click-tracking';
 
 newTracker('sp1', '{{collector_url}}', {
    appId: 'my-app-id',
@@ -212,6 +212,36 @@ enableButtonClickTracking({
 </TabItem>
 </Tabs>
 
+### Default label in events
+
+The tracker automatically adds the `label` information in events based on the button's content or data attributes.
+
+Since the `label` property in the event schema is required, starting from version 4.5 of the tracker, the tracker adds a `(empty)` string as the default label in case it can't be inferred from the button itself.
+The default value is configurable using the `defaultLabel` option:
+
+<Tabs groupId="platform" queryString>
+<TabItem value="js" label="JavaScript (tag)" default>
+
+```javascript
+window.snowplow('enableButtonClickTracking', {
+  defaultLabel: "custom-default-label",
+});
+```
+
+</TabItem>
+<TabItem value="browser" label="Browser (npm)">
+
+```javascript
+import { enableButtonClickTracking } from '@snowplow/browser-plugin-button-click-tracking';
+
+enableButtonClickTracking({
+  defaultLabel: "custom-default-label",
+});
+```
+
+</TabItem>
+</Tabs>
+
 ## Adding context entities to tracked events
 
 You can also attach context entities to the tracked button click events as either an array of self-describing JSON objects or a callback function that returns the entities dynamically.
@@ -296,7 +326,7 @@ enableButtonClickTracking({
 The plugin will track the following data (if present on the element):
 
 | Field     | Description                                         | Type       | Required? |
-|-----------|-----------------------------------------------------|------------|-----------|
+| --------- | --------------------------------------------------- | ---------- | --------- |
 | `label`   | The text on the button, or a user-provided override | `string`   | Yes       |
 | `id`      | The ID of the button                                | `string`   | No        |
 | `classes` | The classes of the button                           | `string[]` | No        |
@@ -335,7 +365,7 @@ Suppose we have the following button on our page:
 
 ```html
 <button id="home-btn" class="nav-btn blue-btn outlined" data-sp-button-label="Home" name="home">
-    <i class="fa fa-home">
+    <i className="fa fa-home">
 </button>
 ```
 
@@ -370,7 +400,7 @@ Suppose we have the following button on our page:
 
 ```html
 <button id="home-btn" class="nav-btn blue-btn outlined" data-sp-button-label="Home" name="home">
-    <i class="fa fa-home">
+    <i className="fa fa-home">
 </button>
 ```
 
